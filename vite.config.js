@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:5001',
+        target: 'https://zaio-airbnb-clone-5bedc68c59e8.herokuapp.com',
         changeOrigin: true,
       },
     },
