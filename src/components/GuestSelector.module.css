@@ -1,0 +1,90 @@
+.panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 16px 0;
+  z-index: 50;
+  min-width: 360px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 24px;
+}
+
+.row:not(:last-child) {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.rowLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #717171;
+}
+
+.subtitleLink {
+  font-size: 14px;
+  color: #222;
+  text-decoration: underline;
+}
+
+.subtitleLink:hover {
+  color: #717171;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.counterBtn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #b0b0b0;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 18px;
+  line-height: 1;
+  color: #222;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterBtn:hover:not(:disabled) {
+  border-color: #222;
+}
+
+.counterBtn:disabled {
+  border-color: #ebebeb;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.counterValue {
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 24px;
+  text-align: center;
+}

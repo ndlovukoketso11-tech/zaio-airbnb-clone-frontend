@@ -1,0 +1,214 @@
+.overlay {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  z-index: 50;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  min-width: 560px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 24px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.tab:hover {
+  background: #f7f7f7;
+}
+
+.tabActive {
+  background: #222;
+  color: #fff;
+}
+
+.navRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.navBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  flex-shrink: 0;
+  margin-top: 32px;
+}
+
+.navBtn:hover {
+  background: #f7f7f7;
+}
+
+.calendars {
+  display: flex;
+  gap: 32px;
+  flex: 1;
+  justify-content: center;
+}
+
+.calendar {
+  min-width: 220px;
+}
+
+.calendarMonthLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: #222;
+}
+
+.weekdayRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekday {
+  font-size: 12px;
+  font-weight: 500;
+  color: #717171;
+  text-align: center;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.dayPad {
+  width: 32px;
+  height: 32px;
+}
+
+.day {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day:hover:not(.dayDisabled) {
+  background: #f7f7f7;
+}
+
+.dayDisabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.dayStart,
+.dayEnd {
+  background: #222;
+  color: #fff;
+}
+
+.dayStart:hover:not(.dayDisabled),
+.dayEnd:hover:not(.dayDisabled) {
+  background: #222;
+}
+
+.dayInRange {
+  background: #f7f7f7;
+  border-radius: 0;
+}
+
+.dayInRange:hover:not(.dayDisabled) {
+  background: #ebebeb;
+}
+
+.flexRow {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #ebebeb;
+}
+
+.flexLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #222;
+}
+
+.flexPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flexPill {
+  padding: 8px 16px;
+  border: 1px solid #ebebeb;
+  border-radius: 24px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.flexPill:hover {
+  border-color: #222;
+}
+
+.flexPillActive {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+@media (max-width: 640px) {
+  .popup {
+    min-width: auto;
+    width: 100vw;
+    max-width: 360px;
+  }
+
+  .calendars {
+    flex-direction: column;
+  }
+
+  .navRow {
+    flex-direction: column;
+    align-items: center;
+  }
+}
